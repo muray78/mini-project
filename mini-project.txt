@@ -1,0 +1,41 @@
+Berdasarkan proyek mini kemarin, ada persyaratan tambahan:
+
+1. Pastikan semua thumbnail produk di beranda menggunakan kartu Bootstrap. 
+Thumbnail produk harus berisi: gambar sudut yang didirikan dan nama produk.
+
+2. Saat mengklik kartu, modal akan muncul dengan gambar lengkap produk
+
+3. Tambahkan Bootstrap Breadcrumbs di halaman "Tentang Kami" 
+
+4. Gunakan Tombol Bootstrap di tombol kirim (formulir umpan balik di area footer)
+
+5. Tambahkan Success Bootstrap Alert di bagian atas beranda dengan teks "New Arrival on January 2022, check it out!" 
+(Anda dapat mengubah berdasarkan preferensi Anda)
+
+//Komponen Penilaian
+navbar = done
+Breadcrumbs = done
+modal = done
+color = done
+
+
+// footer
+1. form feedback
+2. icon facebook, twitter, linkedin
+
+
+
+//
+
+Add responsiveness in your page using Bootstrap classes.
+
+
+Requirements:
+
+1. Your page must be responsive to this screen size < 576px
+
+2. Style all images to have rounded corners
+
+3. Add Navbar in each page containing page “Home” for homepage and “About Us” for information about the company
+
+4. Create form in the footer of homepage for a feedback form (email, feedback area, submit button)
