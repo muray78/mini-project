@@ -97,47 +97,45 @@ li {
 
 <script>
 
-            function Alphabet(nilai, pesan) {
-              let alphaExp = /^[a-zA-Z]+$/;
-                if(nilai.value.match(alphaExp)) {
-                    return true;
-                }
-                else {
-                    alert(pesan);
-                    nilai.focus();
-                    return false;
-                }
-            }
+function konten() {
+  let konten = document.getElementById("konten");
 
-            function cekEmail(nilai, pesan) {
-              let email = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
-                if(nilai.value.match(email)) {
-                    return true;
-                }
-                else {
-                    alert('Mohon isi Email anda');
-                    nilai.focus();
-                    return false;
-                }
-            }
+  konten.addEventListener("mouseenter", function (event) {
+  event.target.style.color = "red";
 
-            function textArea(nilai, pesan) {
-              let txtArea = /^[a-zA-Z]+$/;
-                if(nilai.value.match(txtArea)) {
-                    return true;
-                }
-                else {
-                    alert(pesan);
-                    nilai.focus();
-                    return false;
-                }
-            }
-          
-            function validasi() {
-                Alphabet(document.getElementById('nama_kds'), 'Mohon isi nama lengkap !');
-                cekEmail(document.getElementById('email_kds'), 'Mohon isi email !');
-                textArea(document.getElementById('txtArea_kds'), 'Harap isi pesan !!');
-              }
+  setTimeout(function() {
+    event.target.style.color = "";
+  }, 2500);
+}, false)
+
+}
+
+
+
+function notifikasi(data,pesan) {
+  let alphaExp = /^[a-zA-Z]+$/;
+  let email = /^([a-zA-Z0-9_.+-])+@(([a-zA-Z0-9-])+.)+([a-zA-Z0-9]{2,4})+$/;
+  let txtArea = /^[a-zA-Z]+$/;
+
+  if (data.value.match(alphaExp)) {
+    return true;
+  } else if (data.value.match(email)) {
+    return  true;
+  } else if (data.value.match(txtArea)) {
+    return true
+  } else {
+    alert(pesan);
+    nilai.focus();
+    return false;
+  }
+
+}
+
+function validasi() {
+  notifikasi(document.getElementById('nama_kds'), 'Mohon isi nama lengkap !!');
+  notifikasi(document.getElementById('email_kds'), 'Mohon isi email anda !!');
+  notifikasi(document.getElementById('txtArea_kds'), 'Harap isi pesan !!');
+}
 
 function message() {
   alert('Terimakasih atas donasinya')
@@ -219,12 +217,12 @@ function message() {
   <div class="container-sm">
   <div class="row contents d-flex" style="justify-content: space-evenly; margin-top: 50px; padding-top: 50px; padding-bottom: 50px ;border-left: 1px solid #787A91; border-right: 1px solid #787A91; ; background-color: #F7F7F7;">
     
-    <div class="col-md-3 card" style="margin: 3px; border: none; padding-top: 20px;">
+    <div class="col-md-3 card "  style="margin: 3px; border: none; padding-top: 20px;">
     <img class="card-img-top" src="https://akcdn.detik.net.id/community/media/visual/2022/03/23/mi-11-ultra-meledak.png?w=700&q=90" alt="Xiaomi Mi 11 Ultra" style="border-radius: 4px;">
       <div class="card-body">
         <h3 class="card-title">Xiaomi Mi 11 Ultra Meledak:</h3>
         <p class="card-text">Viral Xiaomi Mi 11 Ultra Diklaim Mendadak Meledak</p>
-        <a  href="https://inet.detik.com/consumer/d-5996618/viral-xiaomi-mi-11-ultra-diklaim-mendadak-meledak">Selengkapnya
+        <a  href="https://inet.detik.com/consumer/d-5996618/viral-xiaomi-mi-11-ultra-diklaim-mendadak-meledak" id="konten" onmouseenter="konten()">Selengkapnya
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"/>
           </svg>
